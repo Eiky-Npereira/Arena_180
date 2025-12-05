@@ -2,26 +2,36 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    font-family: "Recusive",sans-serif;
 }
 
 :root {
-    
+
     --branco: #fff;
     --preto: #000;
     --roxo: #4700CF;
-    --laranja: #FFE76E;
+    --laranja: #FFA500;
     --roxo: #D6D1FF;
     --cinza: #F1F1F1;
 }
 
 body {
     background-color: var(--cinza);
+
 }
+
+.faixa-roxa {
+    width: 100%;
+    background-color: #4700cf;
+    height: 119px;
+    border-bottom: 17px solid var(--laranja);
+}
+
 
 /* HEADER */
 header {
     width: 100%;
-    background-color: #4700CF;
+    /* background-color: #4700CF; */
 }
 
 header>div.container-flex {
@@ -29,38 +39,111 @@ header>div.container-flex {
     align-items: center;
     justify-content: space-between;
     height: 165px;
-    background-color: #4700cf;
+    /* background-color: #4700cf; */
 }
 
 .container-flex {
     width: 85%;
     max-width: 1440px;
     margin: 0 auto;
-} 
-
-#logo{
-    width: 200px;
 }
 
-.links{
+#logo {
+    width: 110px;
+}
+
+.links {
     /* background-color: #FFE76E; */
     display: flex;
     align-items: center;
-    gap: 90px; 
+    gap: 90px;
 }
-.links a{
+
+.links a {
     font-size: 27px;
     color: #000000;
     text-decoration: none;
 }
 
-.links a:hover{
+.links a:hover {
     color: #ffffff;
     border-bottom: 1px solid var(--branco);
 }
 
 #icone-barras,
 #icone-x,
-#menu_botao{
+#menu_botao {
     display: none;
 }
+
+#banner {
+    width: 100%;
+    object-fit: cover;
+
+}
+
+/* GRID DE 12 COLUNAS */
+body {
+    margin: 0;
+    background: #e5e5e5; /* cinza claro do fundo */
+    font-family: Arial, sans-serif;
+}
+
+.sobre-nos {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 60px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.sobre-nos h2 {
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 40px;
+    align-items: center;
+}
+
+/* Container do conteúdo */
+.conteudo {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 22px;
+    align-items: center;
+}
+
+/* Imagem ocupa 5 colunas */
+.imagem {
+    grid-column: span 5;
+    background: #000;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.imagem img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Texto ocupa 7 colunas */
+.texto {
+    grid-column: span 7;
+}
+
+.texto p {
+    font-size: 26px;
+    line-height: 1.5;
+    font-weight: 600; /* simulando o negrito do layout */
+}
+
+
+@font-face {
+    font-family:Recursive;
+    src: url(./fonts/Recursive/static/Recursive-Black.ttf);
+    font-weight: bolder;
+   
+}
+
